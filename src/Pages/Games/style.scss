@@ -1,0 +1,52 @@
+.Games {
+  h2 {
+    color: var(--dark);
+    font-weight: bold;
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+    background-color: var(--light);
+    border: 1px solid var(--gray);
+    .card-title,
+    .card-text {
+      color: var(--dark);
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+    img {
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+
+  .btn-group {
+    .btn {
+      background-color: var(--main);
+      border: 1px solid transparent;
+      color: var(--light);
+    }
+    button.active {
+      background-color: var(--light);
+      border: 1px solid var(--main);
+      color: var(--main);
+    }
+  }
+  .btn {
+      background-color: var(--main);
+      border: 1px solid transparent;
+      color: var(--light);
+      margin-right: 2px;
+      &.btn-dark {
+        background-color: var(--dark);
+        color: var(--light);
+      }
+      &:hover{
+        border: 1px solid var(--main);
+        background-color: transparent;
+        color: var(--main);
+      }
+    }
+}

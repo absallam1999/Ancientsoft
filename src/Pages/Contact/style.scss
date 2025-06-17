@@ -1,0 +1,39 @@
+.contact {
+  h2 {
+    font-weight: bold;
+    color: var(--dark);
+  }
+  p {
+    color: var(--dark);
+  }
+
+  .map-responsive {
+    iframe {
+      width: 100%;
+      border-radius: 12px;
+    }
+  }
+
+  form {
+    background-color: var(--dark);
+    label {
+      font-weight: 500;
+      color: var(--light);
+    }
+    input,
+    textarea {
+      border-radius: 8px;
+    }
+    button {
+      border-radius: 8px;
+      background-color: var(--main);
+      color: var(--light);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: transparent;
+        border: 1px solid var(--main);
+        color: var(--main);
+      }
+    }
+  }
+}

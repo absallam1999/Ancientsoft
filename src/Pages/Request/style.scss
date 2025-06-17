@@ -1,0 +1,34 @@
+.Request {
+  h2 {
+    font-weight: 700;
+  }
+
+  form {
+    background-color: var(--light);
+  }
+
+  .form-label {
+    color: var(--dark);
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: 0.5rem;
+  }
+
+  .btn-dark {
+    background-color: var(--dark);
+    border: 1px solid transparent;
+    color: var(--light);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid var(--main);
+      color: var(--main);
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}

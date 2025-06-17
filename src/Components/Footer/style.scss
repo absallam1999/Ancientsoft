@@ -1,0 +1,19 @@
+footer {
+  transition: all 0.3s ease-in-out;
+}
+footer .row a img {
+  width: 150px;
+}
+
+footer .row ul li {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-bottom: 1px solid var(--main);
+    cursor: pointer;
+  }
+}
+
+footer .fa-brands:hover {
+  color: var(--main);
+}

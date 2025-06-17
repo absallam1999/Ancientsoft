@@ -1,0 +1,111 @@
+.About {
+  padding: 2rem 0;
+
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--main);
+    }
+  }
+
+  .mission-section {
+    padding: 3rem 1rem;
+
+    .text {
+      max-width: 600px;
+
+      h3 {
+        font-weight: bold;
+        color: var(--main);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+
+    .image img {
+      max-width: 300px;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .values-section {
+    padding: 3rem 1rem;
+
+    h3 {
+      color: var(--main);
+      font-weight: bold;
+    }
+
+    .value-card {
+      background: var(--light);
+      border: 1px solid var(--gray);
+      transition: all 0.3s ease;
+
+      h5 {
+        color: var(--main);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: var(--dark);
+      }
+
+      &:hover {
+        background: var(--main);
+        color: var(--light);
+
+        h5,
+        p {
+          color: var(--dark);
+        }
+      }
+    }
+  }
+  .FAQs {
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      color: var(--main);
+      margin-bottom: 1rem;
+    }
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .accordion-item {
+        border: none;
+
+        .accordion-button {
+          background-color: var(--main);
+          color: var(--light);
+
+          &:not(.collapsed) {
+            background-color: var(--main);
+            color: var(--light);
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .accordion-body {
+          background-color: var(--light);
+          color: var(--dark);
+        }
+      }
+    }
+  }
+}

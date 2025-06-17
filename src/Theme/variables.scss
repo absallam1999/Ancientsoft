@@ -1,0 +1,63 @@
+:root {
+  /** Primary **/
+  --main: #a695ff;
+  --main-rgb: 166, 149, 255;
+  --main-shadow: #947ffd;
+  --main-tint: #b0a0fc;
+
+  /** success **/
+  --success: #10dc60;
+  --success-rgb: 16, 220, 96;
+  --success-shadow: #0ec254;
+  --success-tint: #28e070;
+
+  /** danger **/
+  --danger: #f04141;
+  --danger-rgb: 245, 61, 61;
+  --danger-shadow: #d33939;
+  --danger-tint: #f25454;
+
+  /** dark **/
+  --dark: #222428;
+  --dark-rgb: 34, 34, 34;
+  --dark-shadow: #1e2023;
+  --dark-tint: #383a3e;
+
+  /** Gray **/
+  --gray: #efefef ;
+  --gray-rgb: 152, 154, 162;
+  --gray-shade: #e0e0e0;
+  --gray-tint: #c4c6ce;
+
+  /** light **/
+  --light: #f8f9fa;
+  --light-rgb: 244, 244, 244;
+  --light-shadow: #d7d8da;
+  --light-tint: #fafafa;
+
+  /** Font **/
+  --primary: "Montserrat", system-ui, sans-serif;
+  --secondary: "Belanosima", system-ui, sans-serif;
+}
+
+body.dark {
+  --main: #715bff;
+  --main-shadow: #4c3fc7;
+  --main-tint: #8370ff;
+
+  --success: #0ab84a;
+  --danger: #e32b2b;
+
+  --dark: #f1f1f1;
+  --dark-rgb: 241, 241, 241;
+  --dark-shadow: #ccc;
+  --dark-tint: #ddd;
+
+  --gray: #2c2c2e;
+  --gray-shade: #3a3a3c;
+  --gray-tint: #48484a;
+
+  --light: #1c1c1e;
+  --light-shadow: #101010;
+  --light-tint: #2b2b2d;
+}
