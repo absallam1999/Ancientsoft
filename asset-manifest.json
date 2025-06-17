@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ancientsoft/static/css/main.ed39adad.css",
-    "main.js": "/Ancientsoft/static/js/main.cd291869.js",
+    "main.js": "/Ancientsoft/static/js/main.ea3e460d.js",
     "static/media/fa-thin-100.ttf": "/Ancientsoft/static/media/fa-thin-100.3f01811ac4cb430abf8b.ttf",
     "static/media/fa-duotone-900.ttf": "/Ancientsoft/static/media/fa-duotone-900.c946f95a3d612868e72c.ttf",
     "static/media/fa-light-300.ttf": "/Ancientsoft/static/media/fa-light-300.d5981daec7333443005e.ttf",
@@ -25,10 +25,10 @@
     "static/media/Header-Logo.png": "/Ancientsoft/static/media/Header-Logo.f1d145daf136752fa26f.png",
     "index.html": "/Ancientsoft/index.html",
     "main.ed39adad.css.map": "/Ancientsoft/static/css/main.ed39adad.css.map",
-    "main.cd291869.js.map": "/Ancientsoft/static/js/main.cd291869.js.map"
+    "main.ea3e460d.js.map": "/Ancientsoft/static/js/main.ea3e460d.js.map"
   },
   "entrypoints": [
     "static/css/main.ed39adad.css",
-    "static/js/main.cd291869.js"
+    "static/js/main.ea3e460d.js"
   ]
 }
