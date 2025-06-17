@@ -2,11 +2,11 @@
   "name": "ancientsoft",
   "version": "1.0.0",
   "description": "Download Free Games, Apps and Tools - AncientSoft.com",
-  "homepage": "https://absallam1999.github.io/Ancientsoft",
+  "homepage": "https://absallam1999.github.io/Ancientsoft/",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run building",
-    "deploy": "gh-pages -d building",
+    "deploy": "gh-pages -d build",
     "starting": "node scripts/start.js",
     "building": "node scripts/build.js",
     "formating": "prettier --write .",
