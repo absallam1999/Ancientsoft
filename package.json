@@ -2,7 +2,7 @@
   "name": "ancientsoft",
   "version": "1.0.0",
   "description": "Download Free Games, Apps and Tools - AncientSoft.com",
-  "homepage": "https://absallam1999.github.io/ancientsoft",
+  "homepage": "https://absallam1999.github.io/Ancientsoft",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run building",
