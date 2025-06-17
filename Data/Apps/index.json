@@ -1,0 +1,119 @@
+{
+  "Apps": [
+    {
+      "Id": 1,
+      "Name": "MFader ActiveX Control",
+      "Description": "Add multimedia capabilities to your Visual Basic application with this easy to use yet powerful ActiveX control. This OCX control has more than 115 dazzling and splendid effects to make your multimedia application looks professional and some of these cool effects are pushing, pulling, rolling, stretching, squeezing, revealing... and many more. It is Runtime royalty free.",
+      "What": [
+        " Multimedia application.",
+        "Presentations",
+        " Screen savers.",
+        " Slideshow and Many more."
+      ],
+      "Features": [
+        "115 amazing effects.",
+        " The ability to set the graphics width of the effect.",
+        " You have total control over the speed of the effect.",
+        " You can stop the running effect with a simple call to the method StopIt.",
+        " You can set a delay timer to make it wait for a specific time before applying the next effect.",
+        " You can run one effect at a time, sequential or random effects."
+      ],
+      "Compatible": [
+        "Microsoft Visual Studio 6.0",
+        " Microsoft Visual Studio 97",
+        " Microsoft Office 2000",
+        " Microsoft Office 97",
+        " Microsoft FrontPage",
+        " Microsoft Internet Explorer 5.0"
+      ],
+      "Download": "MFaderDemo.exe",
+      "Size": "526 KB",
+      "Price": "$79.9",
+      "Order": "https://secure.bmtmicro.com/ECommerce-OffSite/1128order.html?check=MFA",
+      "License": [
+        { "for": "One developer", "price": "$79.95" },
+        { "for": "Five developers", "price": "$299.95" },
+        { "for": "Unlimited team", "price": "$5000" }
+      ],
+      "Imgs": ["/assets/Apps/1.webp"],
+      "IsBestSeller": true,
+      "Type": "App"
+    },
+    {
+      "Id": 2,
+      "Name": "Num2Alpha ActiveX DLL",
+      "Description": "This is a very handy DLL to convert numbers to words, for instance, if you pass (23.95,\"dollar\", \"cent\") to this DLL it will convert it to : Twenty three dollars and ninety five cents. Of course you can change the UNIT 'dollar' and the SUB-UNIT 'cent' to whatever you like. This DLL will make your life much easier in developing accounting applications and printing reports, invoices and checks.",
+      "What": [
+        "Accounting systems/applications.",
+        "Print invoices.",
+        " Check Production Systems",
+        " B2C (Business-to-Customer) Web Sites",
+        " Call Centers",
+        "Financial Reporting",
+        "Educational Tools",
+        "Legal Documentation"
+      ],
+      "Features": [
+        "You must pass numbers only ('45', '654.32' etc) in the first parameter to the DLL.",
+        " If there is not a fraction, the DLL will automatically deletes the Sub-Unit portion.",
+        " The setup automatically REGISTER the DLL.",
+        " The DLL can accept units and sub-units other than money (e.g. Liter or meter)"
+      ],
+      "Compatible": null,
+      "Download": "Num2AlphaDemo.exe",
+      "Size": "294 KB",
+      "Price": "$49.95",
+      "Order": "https://secure.bmtmicro.com/ECommerce-OffSite/1128order.html?check=N2A",
+      "License": [
+        { "for": "One developer", "price": "$49.95" },
+        { "for": "Five developers", "price": "$149.95" },
+        { "for": "Unlimited team", "price": "$2000" }
+      ],
+      "Imgs": ["/assets/Apps/2.gif"],
+      "IsBestSeller": true,
+      "Type": "App"
+    },
+    {
+      "Id": 3,
+      "Name": "Word-It",
+      "Description": "Word-It is a small utility which converts numbers to words, it is very handy when it is needed to write your bank check with ease, no more spelling or wrong writing. You can use it with your preferred word processing, accounting or any other program you like where you can add and edit text with it.",
+      "What": [
+        "Accounting systems/applications.",
+        "Print invoices.",
+        " Check Production Systems",
+        "Business to Customer Web Sites",
+        "Financial Reporting",
+        "Educational Tools",
+        "Legal Documentation"
+      ],
+      "Features": [
+        "Security : Reduces anyone fraudulently changing the numbering on any form of documentation by displaying numbers in written format.",
+        "Clarity : Reduces any possibility of the reader of a web page or document from misreading the numerical figures.",
+        "Personality : Make your documentation look less computer generated."
+      ],
+      "Compatible": null,
+      "Download": "WordItDemo.exe",
+      "Size": "977 KB",
+      "Price": "$19.95",
+      "Order": "https://secure.bmtmicro.com/ECommerce-OffSite/1128order.html?check=WRD",
+      "License": null,
+      "Imgs": ["/assets/Apps/3.gif"],
+      "Type": "App"
+    },
+    {
+      "Id": 4,
+      "Name": "EzMagnifier",
+      "Description": "EzMagnifier is a small utility to magnify a portion of the screen where you can choose the zooming factor and you can resize the magnified portion itself to suite your needs. You can capture the image of the magnified area and the program saves it  in the same folder of the program and you can save multiple captures as the program save them sequentially.",
+      "What": null,
+      "Features": null,
+      "Compatible": null,
+      "Download": "EzMagnifierSetup.exe",
+      "Size": "980 KB",
+      "Price": "FREE",
+      "Order": null,
+      "License": null,
+      "Imgs": ["/assets/Apps/4.gif"],
+      "Type": "App"
+    }
+  ]
+}
