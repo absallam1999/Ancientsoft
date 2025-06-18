@@ -65,7 +65,7 @@ Guidelines:
 
 
 ## License  
-[MIT](LICENSE) © [Your Name or Organization]
+[MIT](LICENSE) © Ancientsoft
 
 ---
 
