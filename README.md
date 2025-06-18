@@ -19,9 +19,10 @@ Short explanation of Ancientsoft—goal, vision, and what gap it fills.
 ---
 
 ## Features  
-- Feature 1 – e.g. intuitive UI, flexible plugin system  
-- Feature 2 – e.g. real-time synchronization  
-- Feature 3 – etc.
+- Feature 1 – intuitive UI, flexible plugin system  
+- Feature 2 – real-time synchronization  
+- Feature 3 – Filter & Searching
+- Feature 4 - Mobile-Friendly Layout
 
 ---
 
@@ -47,13 +48,10 @@ cd Ancientsoft
 
 ### Setup  
 ```bash
-
 cd Ancientsoft
 npm install
 ```
-
 Then navigate to `http://localhost:3000`.
-
 ---
 
 ## Contributing  
