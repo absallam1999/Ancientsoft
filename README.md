@@ -52,6 +52,8 @@ cd Ancientsoft
 npm install
 ```
 Then navigate to `http://localhost:3000`.
+```
+
 ---
 
 ## Contributing  
