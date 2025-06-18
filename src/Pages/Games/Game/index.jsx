@@ -44,9 +44,11 @@ export default function Game() {
           <p>
             <strong>Price:</strong> {game.Price}
           </p>
+          {game.Order != null && (
           <a href={game.Order} className="btn btn-buy me-2">
             Buy Now
           </a>
+          )}
           <a
             href={`/assets/Download/${game.Download}`}
             download

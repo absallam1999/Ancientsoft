@@ -45,9 +45,11 @@ export default function Prog() {
           <p>
             <strong>Price:</strong> {app.Price}
           </p>
+        {app.Order != null && (
           <a href={app.Order} className="btn btn-buy me-2">
             Buy Now
           </a>
+        )}
           <a
             href={`/assets/Download/${app.Download}`}
             download
