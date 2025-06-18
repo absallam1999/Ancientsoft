@@ -1,19 +1,10 @@
-import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 
 export default function ErrorPage() {
   document.title = `404 - Error Page`;
-  
+
   const location = useLocation();
-  const navigate = useNavigate();
-
-useEffect(() => {
-  setTimeout(() => {
-    navigate("/");
-  }, 2000)
-}, [])
-
   return (
     <div className="error-page d-flex align-items-center min-vh-100">
       <div className="container">

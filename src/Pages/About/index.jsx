@@ -27,7 +27,7 @@ export default function About() {
       <section className="values-section">
         <div className="container text-center">
           <h3>Our Values</h3>
-          <div className="row mt-4">
+          <div className="row mt-4 g-3">
             <div className="col-md-4">
               <div className="value-card p-4 rounded-4 shadow-sm">
                 <h5>Innovation</h5>

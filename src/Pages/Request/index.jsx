@@ -1,8 +1,13 @@
+import emailjs from "emailjs-com";
 import { useState } from "react";
 import "./style.scss";
 
 export default function Request() {
   document.title = "Request - AncientSoft";
+
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateID = process.env.REACT_APP_EMAILJS_NEWREQUEST_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
   const [form, setForm] = useState({
     type: "game",
@@ -18,14 +23,34 @@ export default function Request() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          type: form.type,
+          name: form.name,
+          email: form.email,
+          title: form.title,
+          description: form.description,
+        },
+        publicKey,
+      )
+      .then(() => {
+        alert("Request sent!");
+        setForm({
+          type: "game",
+          name: "",
+          email: "",
+          title: "",
+          description: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to send:", error);
+        alert("Failed to send request. Try again.");
+      });
     alert(`Request submitted!\n\n${JSON.stringify(form, null, 2)}`);
-    setForm({
-      type: "game",
-      name: "",
-      email: "",
-      title: "",
-      description: "",
-    });
   };
 
   return (

@@ -28,7 +28,7 @@ export default function Games() {
 
     if (search.trim()) {
       updated = updated.filter((g) =>
-        g.Name.toLowerCase().includes(search.toLowerCase())
+        g.Name.toLowerCase().includes(search.toLowerCase()),
       );
     }
 

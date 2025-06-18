@@ -1,51 +1,49 @@
 * {
   box-sizing: border-box;
   ::selection {
-    background-color: #a695ff;
-    color: #222428;
+    background-color: var(--main);
+    color: var(--dark);
   }
   ::-webkit-scrollbar {
     width: 10px;
-    background-color: #222428;
+    background-color: var(--light);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #a695ff;
+    background-color: var(--main);
     border-radius: 7px;
     &:hover {
-      background-color: #947ffd;
+      background-color: var(--main-shadow);
     }
   }
 }
 
 body {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-inline: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-inline: 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  max-width: 100%;
-  height: 100%;
-  max-height: 100%;
-  text-size-adjust: none;
-  text-rendering: optimizeLegibility;
-  touch-action: manipulation;
-  -webkit-user-drag: none;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  font-family: var(--primary);
+  min-height: 100vh;
+
+  font-family: var(--primary, system-ui, sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
   font-optical-sizing: auto;
-  -ms-content-zooming: none;
-  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--light);
-  color: var(--dark);
-  transition: all 0.3s ease-in-out;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--dark, #000);
+  background-color: var(--light, #fff);
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+  overscroll-behavior-y: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
@@ -53,7 +51,7 @@ a {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: #a695ff;
+    color: var(--main);
   }
 }
 

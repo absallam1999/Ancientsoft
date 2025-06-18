@@ -48,13 +48,16 @@ export default function Privacy() {
       <h5 className="mt-4">6. You are secure</h5>
       <ul>
         <li>At Ancientsoft.com we care alot about your Security.</li>
-        <li>If you're not Satisfied with any of our Games then we'll refund your order anytime.</li>
+        <li>
+          If you're not Satisfied with any of our Games then we'll refund your
+          order anytime.
+        </li>
       </ul>
 
       <h5 className="mt-4">7. Contact</h5>
       <p>
         If you have any concerns or requests regarding your data, please contact
-        us at: <code>privacy@ancientsoft.games</code>
+        us at: <code> @ ancientsoft.com</code>
       </p>
     </div>
   );

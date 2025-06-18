@@ -24,7 +24,7 @@
   --dark-tint: #383a3e;
 
   /** Gray **/
-  --gray: #efefef ;
+  --gray: #efefef;
   --gray-rgb: 152, 154, 162;
   --gray-shade: #e0e0e0;
   --gray-tint: #c4c6ce;
@@ -37,7 +37,7 @@
 
   /** Font **/
   --primary: "Montserrat", system-ui, sans-serif;
-  --secondary: "Belanosima", system-ui, sans-serif;
+  --secondary: system-ui, sans-serif;
 }
 
 body.dark {

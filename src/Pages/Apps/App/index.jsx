@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getApp, getAll } from "../../../Utils/api.js";
+import "lightbox2/dist/css/lightbox.min.css";
 import "./style.scss";
 
 export default function Prog() {
@@ -45,39 +46,55 @@ export default function Prog() {
           <a href={app.Order} className="btn btn-buy me-2">
             Buy Now
           </a>
-          <a href={`/assets/Download/${app.Download}`} download className="btn btn-down">
+          <a
+            href={`/assets/Download/${app.Download}`}
+            download
+            className="btn btn-down"
+          >
             Download
           </a>
         </div>
         <div className="col-md-6 text-center">
-          <img
-            src={app.Imgs?.[0]}
-            alt={app.Name}
-            className="img-fluid rounded-4 shadow"
-          />
+          <a
+            href={app.Imgs?.[0]}
+            data-lightbox="App Name"
+            data-title={app.Name}
+          >
+            <img
+              src={app.Imgs?.[0]}
+              alt={app.Name}
+              className="img-fluid rounded-4 shadow-sm gallery-thumb"
+              style={{
+                cursor: "zoom-in",
+                transition: "0.3s",
+                objectFit: "cover",
+                aspectRatio: "4/3",
+              }}
+            />
+          </a>
         </div>
       </div>
 
-      {app.What > 0 &&
-      <section className="mb-4">
-        <h4>🧰 Where You Can Use It</h4>
-        <ul>
-          {app.What.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </section>
-      }
+      {app.What > 0 && (
+        <section className="mb-4">
+          <h4>🧰 Where You Can Use It</h4>
+          <ul>
+            {app.What.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {app.Features && (
-      <section className="mb-4">
-        <h4>🚀 Features</h4>
-        <ul>
-          {app.Features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="mb-4">
+          <h4>🚀 Features</h4>
+          <ul>
+            {app.Features.map((feature, i) => (
+              <li key={i}>{feature}</li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {app.Compatible && (
@@ -92,19 +109,19 @@ export default function Prog() {
       )}
 
       {app.License != null && (
-      <section className="mb-4">
-        <h4>📜 License Options</h4>
-        <div className="row g-3">
-          {app.License.map((lic, i) => (
-            <div className="col-12 col-sm-6 col-md-4" key={i}>
-              <div className="border rounded p-3 h-100 text-center">
-                <h6>{lic.for}</h6>
-                <p className="text-primary fw-bold">{lic.price}</p>
+        <section className="mb-4">
+          <h4>📜 License Options</h4>
+          <div className="row g-3">
+            {app.License.map((lic, i) => (
+              <div className="col-12 col-sm-6 col-md-4" key={i}>
+                <div className="border rounded p-3 h-100 text-center">
+                  <h6>{lic.for}</h6>
+                  <p className="text-primary fw-bold">{lic.price}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
       )}
 
       <section className="mb-4">
@@ -112,18 +129,30 @@ export default function Prog() {
         <div className="row">
           {app.Imgs.map((img, i) => (
             <div className="col-12 col-md-6 col-lg-4 mb-3" key={i}>
-              <img
-                src={img}
-                alt={`Screenshot ${i + 1}`}
-                className="img-fluid rounded-3 shadow"
-              />
+              <a
+                href={img}
+                data-lightbox="screenshots"
+                data-title={`Screenshot ${i + 1}`}
+              >
+                <img
+                  src={img}
+                  alt={`Screenshot ${i + 1}`}
+                  className="img-fluid rounded-4 shadow-sm gallery-thumb"
+                  style={{
+                    cursor: "zoom-in",
+                    transition: "0.3s",
+                    objectFit: "cover",
+                    aspectRatio: "4/3",
+                  }}
+                />
+              </a>
             </div>
           ))}
         </div>
       </section>
 
       <section className="mb-4">
-        <h4>🧩 Related Apps</h4>
+        <h4>📱 Related Apps</h4>
         <div className="row g-4">
           {related.slice(0, 4).map((rel, i) => (
             <div className="col-6 col-md-3" key={i}>

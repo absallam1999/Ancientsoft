@@ -28,7 +28,7 @@ export default function Apps() {
 
     if (search.trim()) {
       updated = updated.filter((a) =>
-        a.Name.toLowerCase().includes(search.toLowerCase())
+        a.Name.toLowerCase().includes(search.toLowerCase()),
       );
     }
 

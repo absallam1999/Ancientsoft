@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import HeaderLogo from "./../../assets/Header-Logo.png";
+import DarkLogo from "./../../assets/Header-Logo-Dark.png";
 import { ThemeContext } from "../../Context/ThemeContext";
 import "./style.scss";
 
@@ -15,7 +16,7 @@ export default function NavBar() {
     >
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img src={HeaderLogo} alt="AncientSoft" />
+          <img src={isDark ? DarkLogo : HeaderLogo} alt="AncientSoft" />
         </a>
         <button
           className="navbar-toggler"

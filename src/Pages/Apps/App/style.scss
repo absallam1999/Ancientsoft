@@ -9,6 +9,7 @@
       color: var(--main);
     }
   }
+
   .btn-down {
     background-color: transparent;
     border: 1px solid var(--dark);
@@ -18,6 +19,17 @@
       border: 1px solid transparent;
       color: var(--light);
     }
+  }
+
+  section {
+    border-left: 4px solid var(--main);
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .gallery-thumb:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .hover-shadow {

@@ -35,18 +35,18 @@
     }
   }
   .btn {
-      background-color: var(--main);
-      border: 1px solid transparent;
+    background-color: var(--main);
+    border: 1px solid transparent;
+    color: var(--light);
+    margin-right: 2px;
+    &.btn-dark {
+      background-color: var(--dark);
       color: var(--light);
-      margin-right: 2px;
-      &.btn-dark {
-        background-color: var(--dark);
-        color: var(--light);
-      }
-      &:hover{
-        border: 1px solid var(--main);
-        background-color: transparent;
-        color: var(--main);
-      }
     }
+    &:hover {
+      border: 1px solid var(--main);
+      background-color: transparent;
+      color: var(--main);
+    }
+  }
 }

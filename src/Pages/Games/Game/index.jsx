@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getGame, getAll } from "../../../Utils/api.js";
+import "lightbox2/dist/css/lightbox.min.css";
 import "./style.scss";
 
 export default function Game() {
@@ -44,16 +45,32 @@ export default function Game() {
           <a href={game.Order} className="btn btn-buy me-2">
             Buy Now
           </a>
-          <a href={`/assets/Download/${game.Download}`} download className="btn btn-down">
+          <a
+            href={`/assets/Download/${game.Download}`}
+            download
+            className="btn btn-down"
+          >
             Download
           </a>
         </div>
         <div className="col-md-6 text-center">
-          <img
-            src={game.Imgs[0]}
-            alt={game.Name}
-            className="img-fluid rounded-4 shadow"
-          />
+          <a
+            href={game.Imgs[0]}
+            data-lightbox="Game Name"
+            data-title={game.Name}
+          >
+            <img
+              src={game.Imgs[0]}
+              alt={game.Name}
+              className="img-fluid rounded-4 shadow-sm gallery-thumb"
+              style={{
+                cursor: "zoom-in",
+                transition: "0.3s",
+                objectFit: "cover",
+                aspectRatio: "4/3",
+              }}
+            />
+          </a>
         </div>
       </div>
 
@@ -102,23 +119,35 @@ export default function Game() {
         </section>
       )}
 
-      <section className="mb-4">
-        <h4>🎮 Screenshots</h4>
+      <section className="mb-5">
+        <h4 className="mb-3">🎮 Screenshots</h4>
         <div className="row g-3">
           {game.Imgs.map((img, i) => (
             <div className="col-6 col-md-4 col-lg-3" key={i}>
-              <img
-                src={img}
-                alt={`Screenshot ${i + 1}`}
-                className="img-fluid rounded-3"
-              />
+              <a
+                href={img}
+                data-lightbox="screenshots"
+                data-title={`Screenshot ${i + 1}`}
+              >
+                <img
+                  src={img}
+                  alt={`Screenshot ${i + 1}`}
+                  className="img-fluid rounded-4 shadow-sm gallery-thumb"
+                  style={{
+                    cursor: "zoom-in",
+                    transition: "0.3s",
+                    objectFit: "cover",
+                    aspectRatio: "4/3",
+                  }}
+                />
+              </a>
             </div>
           ))}
         </div>
       </section>
 
       <section className="mb-4">
-        <h4>🧩 Related Apps</h4>
+        <h4>🕹️ Related Games</h4>
         <div className="row g-4">
           {related.slice(0, 4).map((rel, i) => (
             <div className="col-6 col-md-3" key={i}>

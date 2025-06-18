@@ -24,6 +24,9 @@
     textarea {
       border-radius: 8px;
     }
+    textarea {
+      resize: none;
+    }
     button {
       border-radius: 8px;
       background-color: var(--main);

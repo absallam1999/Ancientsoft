@@ -2,11 +2,8 @@
   "name": "ancientsoft",
   "version": "1.0.0",
   "description": "Download Free Games, Apps and Tools - AncientSoft.com",
-  "homepage": "https://absallam1999.github.io/Ancientsoft/",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run building",
-    "deploy": "gh-pages -d build",
     "starting": "node scripts/start.js",
     "building": "node scripts/build.js",
     "formating": "prettier --write .",
@@ -29,7 +26,6 @@
     "babel-plugin-named-asset-import": "^0.3.8",
     "babel-preset-react-app": "^10.0.1",
     "bfj": "^7.0.2",
-    "gh-pages": "^6.3.0",
     "browserslist": "^4.18.1",
     "camelcase": "^6.2.1",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
@@ -37,6 +33,7 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
+    "emailjs-com": "^3.2.0",
     "eslint": "^8.3.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-webpack-plugin": "^3.1.1",
@@ -47,6 +44,7 @@
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
+    "lightbox2": "^2.11.5",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -62,8 +60,6 @@
     "react-router-dom": "^7.6.2",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
-    "sass": "^1.89.2",
-    "sass-loader": "^12.3.0",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",
@@ -88,7 +84,9 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5"
   },
   "jest": {
     "roots": [

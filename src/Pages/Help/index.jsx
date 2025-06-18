@@ -17,7 +17,7 @@ export default function Help() {
         </li>
         <li>
           <strong>How to report a bug?</strong> Use the in-game feedback tool or
-          email us at <code>support@ancientsoft.games</code>.
+          email us at <code> @ ancientsoft.com</code>.
         </li>
         <li>
           <strong>Is account registration required?</strong> Some features like
@@ -29,7 +29,7 @@ export default function Help() {
       <p>
         Still need help? Reach out through our{" "}
         <a href="/contact">Contact page</a> or email us at{" "}
-        <code>help@ancientsoft.games</code>.
+        <code> @ ancientsoft.com</code>.
       </p>
     </div>
   );
