@@ -76,6 +76,6 @@ Guidelines:
 ---
 
 ## Contact  
-- **Gmail** – absallam1999@example.com  
-- **GitHub** – [absallam1999](https://github.com/absallam1999)  
-- **LinkedIn** – [linkedin.com/in/absallam1999](https://linkedin.com/in/absallam1999)
+- **Gmail** – [@absallam1999]absallam1999@gmail.com  
+- **GitHub** – [@absallam1999](https://github.com/absallam1999)  
+- **LinkedIn** – [@absallam1999](https://linkedin.com/in/absallam1999)
