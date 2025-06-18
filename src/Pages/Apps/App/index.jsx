@@ -33,9 +33,11 @@ export default function Prog() {
   document.title = `${app.Name} - AncientSoft`;
   return (
     <div className="App container py-5">
-      <div className="row align-items-center mb-4">
-        <div className="col-md-6 mb-2">
+      <div className="row align-items-center">
+        <header>
           <h2>{app.Name}</h2>
+        </header>
+        <div className="col-md-6 mb-2 order-2 order-sm-1">
           <p className="lead">{app.Description}</p>
           <p>
             <strong>Size:</strong> {app.Size}
@@ -54,7 +56,7 @@ export default function Prog() {
             Download
           </a>
         </div>
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center order-1 order-sm-2 mb-4 mb-sm-0">
           <a
             href={app.Imgs?.[0]}
             data-lightbox="App Name"
@@ -75,9 +77,11 @@ export default function Prog() {
         </div>
       </div>
 
-      {app.What > 0 && (
+      {app.What && (
         <section className="mb-4">
-          <h4>🧰 Where You Can Use It</h4>
+          <h4>
+            <i className="fa-solid fa-toolbox"></i> Where You Can Use It
+          </h4>
           <ul>
             {app.What.map((item, i) => (
               <li key={i}>{item}</li>
@@ -88,7 +92,9 @@ export default function Prog() {
 
       {app.Features && (
         <section className="mb-4">
-          <h4>🚀 Features</h4>
+          <h4>
+            <i className="fa-solid fa-rocket-launch"></i> Features
+          </h4>
           <ul>
             {app.Features.map((feature, i) => (
               <li key={i}>{feature}</li>
@@ -99,7 +105,9 @@ export default function Prog() {
 
       {app.Compatible && (
         <section className="mb-4">
-          <h4>💻 Compatible With</h4>
+          <h4>
+            <i className="fa-solid fa-desktop"></i> Compatible With
+          </h4>
           <ul>
             {app.Compatible.map((item, i) => (
               <li key={i}>{item}</li>
@@ -110,11 +118,13 @@ export default function Prog() {
 
       {app.License != null && (
         <section className="mb-4">
-          <h4>📜 License Options</h4>
+          <h4>
+            <i className="fa-solid fa-file-contract"></i> License Options
+          </h4>
           <div className="row g-3">
             {app.License.map((lic, i) => (
               <div className="col-12 col-sm-6 col-md-4" key={i}>
-                <div className="border rounded p-3 h-100 text-center">
+                <div className="square border rounded p-3 h-100 text-center">
                   <h6>{lic.for}</h6>
                   <p className="text-primary fw-bold">{lic.price}</p>
                 </div>
@@ -125,7 +135,9 @@ export default function Prog() {
       )}
 
       <section className="mb-4">
-        <h4>📸 Screenshot</h4>
+        <h4>
+          <i class="fa-solid fa-camera"></i> Screenshot
+        </h4>
         <div className="row">
           {app.Imgs.map((img, i) => (
             <div className="col-12 col-md-6 col-lg-4 mb-3" key={i}>
@@ -152,7 +164,7 @@ export default function Prog() {
       </section>
 
       <section className="mb-4">
-        <h4>📱 Related Apps</h4>
+        <h4><i className="fa-solid fa-code"></i> Related Apps</h4>
         <div className="row g-4">
           {related.slice(0, 4).map((rel, i) => (
             <div className="col-6 col-md-3" key={i}>
@@ -174,7 +186,7 @@ export default function Prog() {
       </section>
 
       <section className="mb-4">
-        <h4>🙏 Donate us</h4>
+        <h4><i class="fa-solid fa-sack-dollar"></i> Donate us</h4>
         <a href="https://secure.bmtmicro.com/cart">Click to Donate.</a>
       </section>
     </div>

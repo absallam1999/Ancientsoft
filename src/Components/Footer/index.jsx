@@ -1,17 +1,21 @@
 import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
 import LogoImg from "./../../assets/Logo.png";
-import { getAll } from "../../Utils/api.js";
+import { getAll, getApp } from "../../Utils/api.js";
 import "./style.scss";
 
 export default function Footer() {
   const { theme } = useContext(ThemeContext);
   const [data, setData] = useState([]);
+  const [prog, setProg] = useState({})
 
   useEffect(() => {
     getAll("Games").then((res) => {
       if (res) setData(res.Games);
     });
+    getApp(1).then((res) => {
+      if(res) setProg(res);
+    })
   }, []);
 
   const isDark = theme === "dark";
@@ -63,13 +67,14 @@ export default function Footer() {
           <div className="col-md-3 col-lg-2 col-xl-2 mb-4">
             <h6 className="text-uppercase fw-bold">Latest</h6>
             <ul className="list-unstyled">
-              {data.slice(0, 4).map((d, index) => {
+              {data.slice(0, 3).map((d, index) => {
                 return (
                   <li key={index}>
                     <a href={`/game/${d.Id}`}>{d.Name}</a>
                   </li>
                 );
               })}
+              <li><a href="/app/1">{prog.Name}</a></li>
             </ul>
           </div>
 

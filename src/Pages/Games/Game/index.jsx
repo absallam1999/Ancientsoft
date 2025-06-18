@@ -32,9 +32,11 @@ export default function Game() {
 
   return (
     <div className="Game container py-5">
-      <div className="row align-items-center mb-4">
-        <div className="col-md-6 mb-2">
+      <div className="row align-items-center">
+        <header>
           <h2>{game.Name}</h2>
+        </header>
+        <div className="col-md-6 mb-2 mb-4 order-2 order-sm-1">
           <p className="lead">{game.Description}</p>
           <p>
             <strong>Size:</strong> {game.Size}
@@ -53,7 +55,7 @@ export default function Game() {
             Download
           </a>
         </div>
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center order-1 order-sm-2 mb-4 mb-sm-0">
           <a
             href={game.Imgs[0]}
             data-lightbox="Game Name"
@@ -75,7 +77,7 @@ export default function Game() {
       </div>
 
       <section className="mb-4">
-        <h4>🧩 How to Play</h4>
+        <h4><i className="fa-solid fa-joystick"></i> How to Play</h4>
         <ul>
           {game.How.map((item, i) => (
             <li key={i}>{item}</li>
@@ -84,7 +86,7 @@ export default function Game() {
       </section>
 
       <section className="mb-4">
-        <h4>🚀 Features</h4>
+        <h4><i className="fa-solid fa-rocket-launch"></i> Features</h4>
         <ul>
           {game.Features.map((feature, i) => (
             <li key={i}>{feature}</li>
@@ -93,7 +95,7 @@ export default function Game() {
       </section>
 
       <section className="mb-4">
-        <h4>🖥 Requirements</h4>
+        <h4><i className="fa-solid fa-desktop"></i> Requirements</h4>
         <ul>
           {game.Requirements.map((req, i) => (
             <li key={i}>{req}</li>
@@ -103,7 +105,7 @@ export default function Game() {
 
       {game.Awards?.length > 0 && (
         <section className="mb-4">
-          <h4 className="mb-4">🏆 Awards</h4>
+          <h4 className="mb-4"><i className="fa-solid fa-trophy-star"></i> Awards</h4>
           <div className="row g-3">
             {game.Awards.map((award, i) => (
               <div className="col-4 col-sm-3 col-md-2" key={i}>
@@ -120,7 +122,7 @@ export default function Game() {
       )}
 
       <section className="mb-5">
-        <h4 className="mb-3">🎮 Screenshots</h4>
+        <h4 className="mb-3"><i className="fa-solid fa-images"></i> Screenshots</h4>
         <div className="row g-3">
           {game.Imgs.map((img, i) => (
             <div className="col-6 col-md-4 col-lg-3" key={i}>
@@ -147,7 +149,7 @@ export default function Game() {
       </section>
 
       <section className="mb-4">
-        <h4>🕹️ Related Games</h4>
+        <h4><i className="fa-solid fa-gamepad-modern"></i> Related Games</h4>
         <div className="row g-4">
           {related.slice(0, 4).map((rel, i) => (
             <div className="col-6 col-md-3" key={i}>
@@ -169,7 +171,7 @@ export default function Game() {
       </section>
 
       <section className="mb-4">
-        <h4>🙏 Donate us</h4>
+        <h4><i class="fa-solid fa-sack-dollar"></i> Donate us</h4>
         <a href="https://secure.bmtmicro.com/cart">Click to Donate.</a>
       </section>
     </div>

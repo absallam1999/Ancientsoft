@@ -38,6 +38,9 @@
   /** Font **/
   --primary: "Montserrat", system-ui, sans-serif;
   --secondary: system-ui, sans-serif;
+
+  /** Icon **/
+  --icon: #c7c7c7;
 }
 
 body.dark {
@@ -60,4 +63,6 @@ body.dark {
   --light: #1c1c1e;
   --light-shadow: #101010;
   --light-tint: #2b2b2d;
+
+  --icon: #2c2c2e;
 }

@@ -1,4 +1,14 @@
 .App {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: var(--main);
+    }
+  }
   .btn-buy {
     background-color: var(--main);
     border: 1px solid transparent;
@@ -22,9 +32,29 @@
   }
 
   section {
-    border-left: 4px solid var(--main);
     padding-left: 1rem;
     margin-top: 2rem;
+    border-left: 4px solid var(--main);
+    transition: all 0.2s ease-in-out;
+    .fa-solid {
+      font-size: 22px;
+      margin-left: 3px;
+      color: var(--icon);
+      transition: color 0.2s ease-in-out;
+    }
+    &:hover {
+      border-left: 4px solid var(--gray);
+      .fa-solid {
+        color: var(--main);
+      }
+    }
+    .square:hover {
+      background-color: var(--main);
+      color: var(--light);
+      .text-primary {
+        color: var(--light) !important;
+      }
+    }
   }
 
   .gallery-thumb:hover {

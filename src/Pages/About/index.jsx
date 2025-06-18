@@ -3,11 +3,73 @@ import "./style.scss";
 
 export default function About() {
   document.title = `About - AncientSoft`;
+
+  const faqData = [
+    {
+      question: "What is AncientSoft?",
+      answer: (
+        <>
+          <code>AncientSoft.com</code> is a passionate team of developers and
+          designers creating immersive, meaningful game and app experiences
+          inspired by history.
+        </>
+      ),
+    },
+    {
+      question: "Our Mission",
+      answer: (
+        <>
+          We craft<code>&nbsp;Games&nbsp;</code>and<code>&nbsp;Apps&nbsp;</code>that blend fun and
+          function, empowering users across platforms with excellence and
+          authenticity.
+        </>
+      ),
+    },
+    {
+      question: "What We Build",
+      answer: (
+        <>
+          From full-featured<code>&nbsp;RPGs&nbsp;</code>and retro games to powerful
+          utility
+          <code>&nbsp;Apps</code>. we use cutting-edge tech and intuitive design.
+        </>
+      ),
+    },
+    {
+      question: "Community First",
+      answer: (
+        <>
+          Our users shape our future. Through feedback, beta tests, and updates.
+          <code>&nbsp;AncientSoft&nbsp;</code>evolves with the community.
+        </>
+      ),
+    },
+    {
+      question: "What’s Next",
+      answer: (
+        <>
+          We're expanding into cloud gaming, multiplayer ecosystems, and
+          AI-driven experiences.<code>&nbsp;AncientSoft&nbsp;</code>is just getting
+          started.
+        </>
+      ),
+    },
+  ];
+
   return (
     <div className="About">
-      <header>
-        <h2>About Page</h2>
-      </header>
+      <section className="hero-section text-center py-5">
+        <header>
+          <div className="container">
+            <h1 className="display-5 fw-bold">
+              Welcome to <a href="/">AncientSoft</a>
+            </h1>
+            <p className="lead">
+              Where ancient inspiration meets modern innovation.
+            </p>
+          </div>
+        </header>
+      </section>
       <section className="mission-section">
         <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
           <div className="text">
@@ -19,7 +81,9 @@ export default function About() {
             </p>
           </div>
           <div className="image">
+            <a href="/">
             <img src={Logo} alt="Logo" />
+            </a>
           </div>
         </div>
       </section>
@@ -30,12 +94,18 @@ export default function About() {
           <div className="row mt-4 g-3">
             <div className="col-md-4">
               <div className="value-card p-4 rounded-4 shadow-sm">
+                <div className="fs-1 mb-3">
+                  <i className="fa-solid fa-lightbulb"></i>
+                </div>
                 <h5>Innovation</h5>
                 <p>We embrace change and constantly seek better solutions.</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="value-card p-4 rounded-4 shadow-sm">
+                <div className="fs-1 mb-3">
+                  <i className="fa-solid fa-bullseye-arrow"></i>
+                </div>
                 <h5>Passion</h5>
                 <p>
                   We build things we love — and you’ll feel it in every click.
@@ -44,6 +114,9 @@ export default function About() {
             </div>
             <div className="col-md-4">
               <div className="value-card p-4 rounded-4 shadow-sm">
+                <div className="fs-1 mb-3">
+                  <i className="fa-solid fa-shield"></i>
+                </div>
                 <h5>Trust</h5>
                 <p>We believe in transparency and keeping our users first.</p>
               </div>
@@ -53,149 +126,46 @@ export default function About() {
       </section>
 
       <section className="FAQs">
-        <h3>FAQs</h3>
         <div className="container">
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
+          <h3 className="text-center mb-4">FAQs</h3>
+          <div className="accordion accordion-flush" id="accordionFlushExample">
+            {faqData.map((faq, index) => (
+              <div className="accordion-item" key={index}>
+                <h2 className="accordion-header" id={`flush-heading${index}`}>
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#flush-collapse${index}`}
+                    aria-expanded="false"
+                    aria-controls={`flush-collapse${index}`}
+                  >
+                    {faq.question}
+                  </button>
+                </h2>
+                <div
+                  id={`flush-collapse${index}`}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={`flush-heading${index}`}
+                  data-bs-parent="#accordionFlushExample"
                 >
-                  What is Ancientsoft
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  <code>AncientSoft.com</code> is a passionate team of game
-                  developers, designers, and creatives committed to building
-                  immersive gaming experiences. Since our founding, we've
-                  combined ancient inspirations with modern technologies to
-                  create games that stand out in quality, style, and
-                  storytelling.
+                  <div className="accordion-body">{faq.answer}</div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  Our Mission
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Our mission is to empower users with software solutions
-                  <code>(Games, Apps)</code> that are not only fun to play but
-                  also leave a lasting impact. Whether it’s mobile, PC, or
-                  cross-platform, we aim to deliver excellence, accessibility,
-                  and authenticity in every release.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseThree"
-                >
-                  What We Build
-                </button>
-              </h2>
-              <div
-                id="flush-collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  From full-featured <code>RPGs</code> and arcade-style classics
-                  to high-performance <code>apps</code> and platforms,
-                  AncientSoft covers it all. Our games are crafted using
-                  cutting-edge tools, efficient engines, and a strong focus on
-                  user engagement.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFour">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFour"
-                >
-                  Community First
-                </button>
-              </h2>
-              <div
-                id="flush-collapseFour"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingFour"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  At <code>AncientSoft</code>, our players come first. We
-                  actively listen to user feedback, host regular beta tests, and
-                  provide constant updates. Our community shapes the evolution
-                  of our titles and inspires our development roadmap.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFive"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFive"
-                >
-                  What’s Next
-                </button>
-              </h2>
-              <div
-                id="flush-collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingFive"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  We’re currently expanding into cloud gaming, multiplayer
-                  ecosystems, and AI-enhanced game experiences. Stay tuned for
-                  our upcoming releases and platform upgrades{" "}
-                  <code>AncientSoft</code> is just getting started.
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+        </div>
+      </section>
+      
+      <section className="cta-section py-5 text-center">
+        <div className="container">
+          <h2 className="fw-bold">Ready to Explore Our World?</h2>
+          <p className="lead">
+            Dive into the adventure — where history becomes gameplay!
+          </p>
+          <a href="/games" className="btn px-4 py-2 mt-3">
+            Browse Games
+          </a>
         </div>
       </section>
     </div>
